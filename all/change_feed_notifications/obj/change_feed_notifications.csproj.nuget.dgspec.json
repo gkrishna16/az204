@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/gopalkbks/Desktop/work/cloud/azure/change_feed_notifications/change_feed_notifications.csproj": {}
+  },
+  "projects": {
+    "/Users/gopalkbks/Desktop/work/cloud/azure/change_feed_notifications/change_feed_notifications.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/gopalkbks/Desktop/work/cloud/azure/change_feed_notifications/change_feed_notifications.csproj",
+        "projectName": "change_feed_notifications",
+        "projectPath": "/Users/gopalkbks/Desktop/work/cloud/azure/change_feed_notifications/change_feed_notifications.csproj",
+        "packagesPath": "/Users/gopalkbks/.nuget/packages/",
+        "outputPath": "/Users/gopalkbks/Desktop/work/cloud/azure/change_feed_notifications/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/gopalkbks/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Azure.Cosmos": {
+              "target": "Package",
+              "version": "[3.35.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.305/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
