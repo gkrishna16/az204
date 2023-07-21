@@ -6,14 +6,14 @@ namespace AlpineSkiHouse.Services
 {
     public class ProductService
     {
-        private static string db_source = "gopalappserver.database.windows.net";
-        private static string db_user = "gopalappserver";
-        private static string db_password = "gks8459$";
-        private static string db_database = "appdb";
-
+        private static string db_source = "gopaldbserver2.database.windows.net";
+        private static string db_user = "gopalserver";
+        private static string db_password = "gopal8459$";
+        private static string db_database = "gopaldb";
         private SqlConnection GetConnection()
         {
             var _builder = new SqlConnectionStringBuilder();
+
             _builder.DataSource = db_source;
             _builder.UserID = db_user;
             _builder.Password = db_password;
@@ -27,7 +27,7 @@ namespace AlpineSkiHouse.Services
             // get the connection
             SqlConnection conn = GetConnection();
             // Empty list of products
-            List<Product> _product_lst = new List<Product>();
+            var _product_lst = new List<Product>();
 
             string statement = "SELECT ProductID, ProductName, Quantity from Products";
 
@@ -35,21 +35,19 @@ namespace AlpineSkiHouse.Services
 
             SqlCommand cmd = new SqlCommand(statement, conn);
 
-            using(SqlDataReader reader = cmd.ExecuteReader())
+            using (SqlDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
                 {
-                    Product product = new Product()
+                    var product = new Product()
                     {
                         ProductID = reader.GetInt32(0),
                         ProductName = reader.GetString(1),
                         Quantity = reader.GetInt32(2)
                     };
-
                     _product_lst.Add(product);
                 }
             };
-
             // closing our connection
             conn.Close();
 
